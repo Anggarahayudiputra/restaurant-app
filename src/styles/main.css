@@ -77,7 +77,9 @@ a{
   }
 
   #logo{
-    text-decoration: none;
+    height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   #btn_open_menu,
@@ -95,12 +97,10 @@ a{
   }
 
   #btn_close_menu{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
-    transform:rotate(90deg);
-    position: absolute;
-    top:.5rem;
-    right:1rem;  
   }
 
   #btn_open_menu:focus{
@@ -122,8 +122,6 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top:3rem;
-    row-gap: 1rem;
     position: fixed;
     width: 100%;
     height: auto;
@@ -133,7 +131,7 @@ a{
     right:0;
     left:0;
     transition: .6s top ease-in-out;
-    padding-bottom:1rem;
+    padding:1rem;
   }
 
   #menu.show #menu_container{
@@ -144,6 +142,11 @@ a{
   #menu_container li{
     list-style: none;
     width: 100%;
+  }
+
+  #menu_container li:nth-child(1){
+    display: flex;
+    justify-content: end;
   }
 
   #menu_container .menu-link{
